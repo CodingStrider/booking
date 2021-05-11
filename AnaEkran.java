@@ -31,9 +31,9 @@ import javax.swing.border.BevelBorder;
 public class AnaEkran extends JFrame {
 
 	private JPanel contentPane;
-	private DefaultTableModel sinemaModel; // tablo s¸tunlar˝n˝ isimlendirmek iÁin
+	private DefaultTableModel sinemaModel; // tablo s√ºtunlar√Ωn√Ω isimlendirmek i√ßin
 	private DefaultTableModel tiyatroModel;
-	private Object[] sinemaData = null; // sqlden veri Áekmek iÁin
+	private Object[] sinemaData = null; // sqlden veri √ßekmek i√ßin
 	private Object[] tiyatroData = null;
 	private JTable table_Sinema;
 	private JTable table_Tiyatro;
@@ -81,7 +81,7 @@ public class AnaEkran extends JFrame {
 	private JTextField fld_KartNo3;
 
 	/**
-	 * Launch the application.
+	 * Launch the application. O ye beybi musti len mq
 	 */
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
@@ -104,28 +104,28 @@ public class AnaEkran extends JFrame {
 
 //////////////////////////////////////////////////////////////////////////////////Sinema
 		sinemaModel = new DefaultTableModel();
-		Object[] colSinema = new Object[5]; // tablo s¸tunlar˝na isim vermek iÁin
+		Object[] colSinema = new Object[5]; // tablo s√ºtunlar√Ωna isim vermek i√ßin
 
-		colSinema[0] = "Film Ad˝";
-		colSinema[1] = "Film T¸r¸";
-		colSinema[2] = "Yˆnetmen";
+		colSinema[0] = "Film Ad√Ω";
+		colSinema[1] = "Film T√ºr√º";
+		colSinema[2] = "Y√∂netmen";
 		colSinema[3] = "Salon";
 		colSinema[4] = "Seans";
 
 		sinemaModel.setColumnIdentifiers(colSinema);
-		sinemaData = new Object[5]; // sqlden veri Áekmek iÁin
+		sinemaData = new Object[5]; // sqlden veri √ßekmek i√ßin
 
 //////////////////////////////////////////////////////////////////////////////////Tiyatro
 		tiyatroModel = new DefaultTableModel();
 		Object[] colTiyatro = new Object[5];
 
-		colTiyatro[0] = "Oyun Ad˝";
-		colTiyatro[1] = "Oyun T¸r¸";
+		colTiyatro[0] = "Oyun Ad√Ω";
+		colTiyatro[1] = "Oyun T√ºr√º";
 		colTiyatro[2] = "Tarih";
 		colTiyatro[3] = "Salon";
 		colTiyatro[4] = "Saat";
 		tiyatroModel.setColumnIdentifiers(colTiyatro);
-		tiyatroData = new Object[5]; // sqlden veri Áekmek iÁin
+		tiyatroData = new Object[5]; // sqlden veri √ßekmek i√ßin
 
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 980, 600);
@@ -177,7 +177,7 @@ public class AnaEkran extends JFrame {
 		JScrollPane scrollPane_Sinema = new JScrollPane();
 		scrollPane_Sinema.setBounds(0, 0, 485, 461);
 		w_paneSinema.add(scrollPane_Sinema);
-///////////////////////////////////////////////////////////////////////////////////Sinema S¸tun ÷zellikleri
+///////////////////////////////////////////////////////////////////////////////////Sinema S√ºtun √ñzellikleri
 		table_Sinema = new JTable(sinemaModel);
 		table_Sinema.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
 		table_Sinema.setFont(new Font("Yu Gothic UI Semibold", Font.PLAIN, 12));
@@ -194,14 +194,14 @@ public class AnaEkran extends JFrame {
 		table_Sinema.getColumnModel().getColumn(4).setPreferredWidth(10);
 		table_Sinema.getColumnModel().getColumn(4).setResizable(false);
 
-		/************************* ﬁimdilik Veri Ekliyorum ***************************/
-		sinemaData[0] = "Recep ›vedik 7";
+		/************************* √ûimdilik Veri Ekliyorum ***************************/
+		sinemaData[0] = "Recep √ùvedik 7";
 		sinemaData[1] = "Komedi";
-		sinemaData[2] = "ﬁahan Gˆkbakar";
+		sinemaData[2] = "√ûahan G√∂kbakar";
 		sinemaData[3] = 1;
 		sinemaData[4] = "13:40";
 		sinemaModel.addRow(sinemaData);
-		sinemaData[0] = "H˝zl˝ ve ÷fkeli 10";
+		sinemaData[0] = "H√Ωzl√Ω ve √ñfkeli 10";
 		sinemaData[1] = "Aksiyon";
 		sinemaData[2] = "Rob Cohen";
 		sinemaData[3] = 4;
@@ -218,7 +218,7 @@ public class AnaEkran extends JFrame {
 		scrollPane_Tiyatro.setBounds(0, 0, 485, 461);
 		w_paneTiyatro.add(scrollPane_Tiyatro);
 
-///////////////////////////////////////////////////////////////////////////////////Tiyatro S¸tun ÷zellikleri
+///////////////////////////////////////////////////////////////////////////////////Tiyatro S√ºtun √ñzellikleri
 		table_Tiyatro = new JTable(tiyatroModel);
 		table_Tiyatro.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
 		table_Tiyatro.setFont(new Font("Yu Gothic UI Semibold", Font.PLAIN, 12));
@@ -248,7 +248,7 @@ public class AnaEkran extends JFrame {
 		table_Konser = new JTable();
 		scrollPane_Konser.setViewportView(table_Konser);
 		///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-		/////////////////////////////////////////////////// PANES›NEMA///////////////////////////////////////////////////////////////
+		/////////////////////////////////////////////////// PANES√ùNEMA///////////////////////////////////////////////////////////////
 		JPanel PaneSinema = new JPanel();
 		PaneSinema.setBorder(new BevelBorder(BevelBorder.LOWERED, new Color(153, 180, 209), new Color(153, 180, 209),
 				new Color(153, 180, 209), new Color(153, 180, 209)));
@@ -377,8 +377,8 @@ public class AnaEkran extends JFrame {
 
 		JComboBox comboBox_Yontem = new JComboBox();
 		comboBox_Yontem.setBounds(33, 326, 110, 22);
-		comboBox_Yontem.addItem("Nakit ˆdeme");
-		comboBox_Yontem.addItem("Kart ile ˆdeme");
+		comboBox_Yontem.addItem("Nakit √∂deme");
+		comboBox_Yontem.addItem("Kart ile √∂deme");
 		PaneSinema.add(comboBox_Yontem);
 
 		JPanel w_pane_Kart = new JPanel();
@@ -490,11 +490,11 @@ public class AnaEkran extends JFrame {
 		btn_Biletlerim.setBounds(82, 464, 92, 35);
 		PaneSinema.add(btn_Biletlerim);
 		btn_Biletlerim.setFont(new Font("Franklin Gothic Medium", Font.PLAIN, 14));
-		///////////////////////////////////////////////// PANES›NEMA/////////////////////////////////////////////////////////////////////
+		///////////////////////////////////////////////// PANES√ùNEMA/////////////////////////////////////////////////////////////////////
 		/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 		/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-		///////////////////////////////////////////////////// PANET›YATRO///////////////////////////////////////////////////////////////
+		///////////////////////////////////////////////////// PANET√ùYATRO///////////////////////////////////////////////////////////////
 		JPanel PaneTiyatro = new JPanel();
 		PaneTiyatro.setBorder(new BevelBorder(BevelBorder.LOWERED, new Color(153, 180, 209), new Color(153, 180, 209),
 				new Color(153, 180, 209), new Color(153, 180, 209)));
@@ -514,12 +514,12 @@ public class AnaEkran extends JFrame {
 		lbl_Poster2.setBounds(324, 35, 128, 161);
 		PaneTiyatro.add(lbl_Poster2);
 
-		JLabel lbl_OyunAdi = new JLabel("Oyun Ad˝:");
+		JLabel lbl_OyunAdi = new JLabel("Oyun Ad√Ω:");
 		lbl_OyunAdi.setFont(new Font("Yu Gothic UI Semibold", Font.BOLD, 15));
 		lbl_OyunAdi.setBounds(33, 50, 107, 18);
 		PaneTiyatro.add(lbl_OyunAdi);
 
-		JLabel lbl_OyunTuru = new JLabel("Oyun T¸r¸:");
+		JLabel lbl_OyunTuru = new JLabel("Oyun T√ºr√º:");
 		lbl_OyunTuru.setFont(new Font("Yu Gothic UI Semibold", Font.BOLD, 15));
 		lbl_OyunTuru.setBounds(33, 73, 107, 18);
 		PaneTiyatro.add(lbl_OyunTuru);
@@ -539,11 +539,11 @@ public class AnaEkran extends JFrame {
 		lbl_Saat.setBounds(33, 143, 107, 18);
 		PaneTiyatro.add(lbl_Saat);
 
-		JButton btn_KoltukSec2 = new JButton("Koltuk SeÁ");
+		JButton btn_KoltukSec2 = new JButton("Koltuk Se√ß");
 		btn_KoltukSec2.setBounds(33, 164, 95, 23);
 		PaneTiyatro.add(btn_KoltukSec2);
 
-		JLabel lbl_OdemeBilgileri2 = new JLabel("÷deme Bilgileri");
+		JLabel lbl_OdemeBilgileri2 = new JLabel("√ñdeme Bilgileri");
 		lbl_OdemeBilgileri2.setFont(new Font("Sitka Text", Font.BOLD | Font.ITALIC, 16));
 		lbl_OdemeBilgileri2.setBounds(33, 208, 128, 23);
 		PaneTiyatro.add(lbl_OdemeBilgileri2);
@@ -617,8 +617,8 @@ public class AnaEkran extends JFrame {
 
 		JComboBox comboBox_Yontem2 = new JComboBox();
 		comboBox_Yontem2.setBounds(33, 326, 110, 22);
-		comboBox_Yontem2.addItem("Nakit ˆdeme");
-		comboBox_Yontem2.addItem("Kart ile ˆdeme");
+		comboBox_Yontem2.addItem("Nakit √∂deme");
+		comboBox_Yontem2.addItem("Kart ile √∂deme");
 		PaneTiyatro.add(comboBox_Yontem2);
 
 		JPanel w_pane_Kart2 = new JPanel();
@@ -731,7 +731,7 @@ public class AnaEkran extends JFrame {
 		btn_BiletIptal_1.setBounds(317, 464, 92, 35);
 		PaneTiyatro.add(btn_BiletIptal_1);
 		PaneTiyatro.setVisible(false);
-		///////////////////////////////////////////////////// PANET›YATRO////////////////////////////////////////////////////////////////
+		///////////////////////////////////////////////////// PANET√ùYATRO////////////////////////////////////////////////////////////////
 		///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 		///////////////////////////////////////////////////// PANEKONSERs///////////////////////////////////////////////////////////////
@@ -754,12 +754,12 @@ public class AnaEkran extends JFrame {
 		lbl_Poster3.setBounds(324, 35, 128, 161);
 		PaneKonser.add(lbl_Poster3);
 
-		JLabel lbl_KonserAdi = new JLabel("Konser Ad˝:");
+		JLabel lbl_KonserAdi = new JLabel("Konser Ad√Ω:");
 		lbl_KonserAdi.setFont(new Font("Yu Gothic UI Semibold", Font.BOLD, 15));
 		lbl_KonserAdi.setBounds(33, 50, 107, 18);
 		PaneKonser.add(lbl_KonserAdi);
 
-		JLabel lbl_KonserTuru = new JLabel("Konser T¸r¸:");
+		JLabel lbl_KonserTuru = new JLabel("Konser T√ºr√º:");
 		lbl_KonserTuru.setFont(new Font("Yu Gothic UI Semibold", Font.BOLD, 15));
 		lbl_KonserTuru.setBounds(33, 73, 107, 18);
 		PaneKonser.add(lbl_KonserTuru);
@@ -779,11 +779,11 @@ public class AnaEkran extends JFrame {
 		lbl_Saat2.setBounds(33, 143, 107, 18);
 		PaneKonser.add(lbl_Saat2);
 
-		JButton btn_KoltukSec3 = new JButton("Koltuk SeÁ");
+		JButton btn_KoltukSec3 = new JButton("Koltuk Se√ß");
 		btn_KoltukSec3.setBounds(33, 164, 95, 23);
 		PaneKonser.add(btn_KoltukSec3);
 
-		JLabel lbl_OdemeBilgileri3 = new JLabel("÷deme Bilgileri");
+		JLabel lbl_OdemeBilgileri3 = new JLabel("√ñdeme Bilgileri");
 		lbl_OdemeBilgileri3.setFont(new Font("Sitka Text", Font.BOLD | Font.ITALIC, 16));
 		lbl_OdemeBilgileri3.setBounds(33, 208, 128, 23);
 		PaneKonser.add(lbl_OdemeBilgileri3);
@@ -857,8 +857,8 @@ public class AnaEkran extends JFrame {
 
 		JComboBox comboBox_Yontem3 = new JComboBox();
 		comboBox_Yontem3.setBounds(33, 326, 110, 22);
-		comboBox_Yontem3.addItem("Nakit ˆdeme");
-		comboBox_Yontem3.addItem("Kart ile ˆdeme");
+		comboBox_Yontem3.addItem("Nakit √∂deme");
+		comboBox_Yontem3.addItem("Kart ile √∂deme");
 		PaneKonser.add(comboBox_Yontem3);
 
 		JPanel w_pane_Kart3 = new JPanel();
